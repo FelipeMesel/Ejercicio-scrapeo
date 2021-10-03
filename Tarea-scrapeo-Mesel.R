@@ -32,12 +32,4 @@ tabla1 <- tabla %>% slice(1:50)
 
 tabla2 <- tabla %>% slice(196:147) 
 
-tabla3 <-as.numeric(tabla$PBI_percapita)
 
-promedio <- mean(tabla3$PBI_percapita)
-
-
-graf<-tabla%>%
-  ggplot() + geom_point(mapping= aes(x=paises,y=PBI_percapita))+
-  labs(y = "PBI_percapita") + coord_flip()+
-  ggtitle("Top 50 de países con mayor PBI per cápita")
